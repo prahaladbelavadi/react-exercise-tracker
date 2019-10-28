@@ -14,7 +14,7 @@ export default class CreateExercises extends Component {
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            username: ',',
+            username: '',
             description: '',
             duration: 0,
             date: new Date(),
