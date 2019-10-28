@@ -1,7 +1,7 @@
-import { React, Component } from "react";
+import React, { Component } from "react";
 
 export default class CreateUser extends Component {
-    render(){
+    render() {
         return (
             <div>
                 <p>
@@ -9,6 +9,6 @@ export default class CreateUser extends Component {
                 </p>
             </div>
         )
-        
+
     }
 }
