@@ -10,9 +10,9 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
     const username = req.body.username;
-    const description = res.body.description;
+    const description = req.body.description;
     const duration = Number(req.body.duration);
-    const date = Dateparse(req.body.date);
+    const date = Date.parse(req.body.date);
 
     const newExercise = new Exercise({
         username,

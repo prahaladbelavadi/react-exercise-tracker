@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Exercise = props => (
@@ -14,7 +14,6 @@ const Exercise = props => (
     </tr>
 )
 
-
 export default class ExercisesList extends Component {
 
     constructor(props) {
@@ -22,14 +21,13 @@ export default class ExercisesList extends Component {
 
         this.deleteExercise = this.deleteExercise.bind(this);
 
-        this.state = { Exercises: [] };
-
+        this.state = { exercises: [] };
     }
 
     componentDidMount() {
         axios.get('http://localhost:5000/exercises/')
             .then(response => {
-                this.setState({ exercises: response.data })
+                this.setState({ exercises: response.data });
             })
             .catch((error) => {
                 console.log(error);
@@ -45,10 +43,9 @@ export default class ExercisesList extends Component {
         })
     }
 
-
     exerciseList() {
-        return this.state.exercises.map(currentexercise => {
-            return <Exercise exercise={this.currentexercise} deleteExercise={this.deleteExercise} key={this.currentexercise._id} />;
+        return this.state.exercises.map((currentexercise, i) => {
+            return <Exercise exercise={currentexercise} deleteExercise={this.deleteExercise} key={i} />;
         })
     }
 
