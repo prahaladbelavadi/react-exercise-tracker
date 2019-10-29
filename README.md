@@ -1,5 +1,7 @@
 # Abstract
 
+A web app to keep track of yours and your friends' exeercises.
+
 A React app to create users, add, edit and delete exercises associated with the user's profile.
 
 The app uses MongoDB, Axios, create-react-app and Express with node to make this happen.
@@ -18,6 +20,11 @@ In the backend directory, you can run:
 
 Runs the express node server at [http://localhost:5000](http://localhost:5000). It also makes use of MongoDB atlas to maintain persistent data state remotely.
 Running the backend server is essential for the front end react app to make any requests to modify/access data to and from mongodb.
+
+Also, the MongoDB atlas cluster has been terminated. Kindly do use a newly spawned instance (in `.env` file).
+
+----
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
