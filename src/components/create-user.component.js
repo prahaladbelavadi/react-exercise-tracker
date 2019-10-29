@@ -34,7 +34,7 @@ export default class CreateUser extends Component {
         this.setState({
             username: ''
         })
-        // window.location = '/'
+        window.location = '/'
     }
 
     render() {
